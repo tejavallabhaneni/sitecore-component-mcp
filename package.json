@@ -1,0 +1,40 @@
+{
+  "name": "sitecore-component-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A component-aware MCP server for SitecoreAI: gives AI agents your JSS component contracts, finds duplicate components, and validates page plans before anything is written.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "prebuild": "tsx scripts/generate-manifest.ts",
+    "dev": "npm run prebuild && next dev",
+    "build": "next build",
+    "start": "next start",
+    "manifest": "tsx scripts/generate-manifest.ts",
+    "manifest:check": "npm run manifest && git diff --exit-code generated/manifest.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "mcp-handler": "^2.4.0",
+    "next": "^15.5.29",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "ts-morph": "^28.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.1"
+  },
+  "overrides": {
+    "postcss": "^8.5.33"
+  }
+}

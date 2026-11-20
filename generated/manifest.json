@@ -1,0 +1,59 @@
+[
+  {
+    "name": "PromoSplit",
+    "description": "Two-column promotional block: image on one side, copy on the other. Use for campaign landing pages and mid-page conversion moments.",
+    "allowedPlaceholders": [
+      "main",
+      "promo-zone"
+    ],
+    "maxPerPage": 3,
+    "params": {
+      "variant": [
+        "image-left",
+        "image-right",
+        "stacked"
+      ]
+    },
+    "fields": [
+      {
+        "name": "Eyebrow",
+        "type": "Single-Line Text",
+        "required": false,
+        "maxLength": 24,
+        "guidance": "Small label above the heading. All caps in the design."
+      },
+      {
+        "name": "Heading",
+        "type": "Single-Line Text",
+        "required": true,
+        "maxLength": 60,
+        "guidance": "Two-line clamp on mobile — keep it tight."
+      },
+      {
+        "name": "Body",
+        "type": "Rich Text",
+        "required": true,
+        "maxLength": 220,
+        "guidance": "Body copy. Inline links fine, no headings."
+      },
+      {
+        "name": "Image",
+        "type": "Image",
+        "required": true,
+        "guidance": "16:9. Alt text required for AA compliance."
+      },
+      {
+        "name": "PrimaryCta",
+        "type": "General Link",
+        "required": true
+      },
+      {
+        "name": "SecondaryCta",
+        "type": "General Link",
+        "required": false,
+        "guidance": "Omit unless there's a genuine secondary action."
+      }
+    ],
+    "sourcePath": "example/src/components/PromoSplit.tsx"
+  }
+]

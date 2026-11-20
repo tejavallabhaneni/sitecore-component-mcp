@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "sitecore-components": {
+      "url": "http://localhost:3000/api/mcp"
+    }
+  }
+}
